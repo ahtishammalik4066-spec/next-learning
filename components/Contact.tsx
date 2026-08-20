@@ -2,13 +2,32 @@
 
 import { useState } from "react";
 
+// Apna WhatsApp number yahan dalein (country code ke saath, jaise 923001234567)
+const WHATSAPP_NUMBER = "923137110648";
+
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const name = formData.get("name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const subject = formData.get("subject")?.toString().trim() || "";
+    const message = formData.get("message")?.toString().trim() || "";
+
+    const text = `Hello, my name is ${name}.\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+
     setSubmitted(true);
+
+    form.reset();
 
     setTimeout(() => {
       setSubmitted(false);
@@ -32,12 +51,12 @@ function Contact() {
             </p>
 
             <h2 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Let's build something useful.
+              {"Let's build something useful."}
             </h2>
 
             <p className="mt-5 max-w-md text-xs leading-7 text-zinc-500 sm:mt-6 sm:text-sm sm:leading-8">
               Have a project idea, collaboration or opportunity?
-              Send me a message and let's start a conversation.
+              {"Send me a message and let's start a conversation."}
             </p>
 
             <div className="mt-8 space-y-5 sm:mt-10 sm:space-y-6">
@@ -239,8 +258,7 @@ function Contact() {
 
             {submitted && (
               <p className="mt-4 text-center text-xs text-emerald-400">
-                Form submitted successfully. Backend integration can be
-                connected next.
+                Redirecting to WhatsApp... Please send the message to complete.
               </p>
             )}
 
