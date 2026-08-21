@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
@@ -8,10 +11,15 @@ import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import IntroScreen from "@/components/IntroScreen";
 
 export default function Home() {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <main className="min-h-screen w-full overflow-x-hidden bg-transparent text-white">
+
+      {showIntro && <IntroScreen onComplete={() => setShowIntro(false)} />}
 
       <Navbar />
       <Hero />

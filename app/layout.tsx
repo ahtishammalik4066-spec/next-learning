@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import BackgroundBubbles from "@/components/ui/BackgroundBubbles";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -23,7 +24,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <BackgroundBubbles />
-        <div className="relative z-10 flex flex-1 flex-col">{children}</div>
+        <SmoothScrollProvider>
+          <div className="relative z-10 flex flex-1 flex-col">{children}</div>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

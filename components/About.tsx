@@ -1,3 +1,5 @@
+import Reveal from "./ui/Reveal";
+
 function About() {
   return (
     <section id="about">
@@ -6,7 +8,7 @@ function About() {
 
         <div className="grid gap-10 sm:gap-16 lg:grid-cols-[0.8fr_1.2fr]">
 
-          <div>
+          <Reveal>
 
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
               01 / About Me
@@ -16,9 +18,9 @@ function About() {
               Where I am right now.
             </h2>
 
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={0.1}>
 
             <p className="text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
               I'm currently pursuing my Bachelor's degree in
@@ -59,7 +61,7 @@ function About() {
 
             </div>
 
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

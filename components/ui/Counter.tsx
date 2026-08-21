@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 function Counter({
   end,
@@ -10,8 +11,12 @@ function Counter({
   suffix?: string;
 }) {
   const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   useEffect(() => {
+    if (!inView) return;
+
     let current = 0;
 
     const duration = 1800;
@@ -30,13 +35,13 @@ function Counter({
     }, interval);
 
     return () => clearInterval(timer);
-  }, [end]);
+  }, [end, inView]);
 
   return (
-    <>
+    <span ref={ref}>
       {count}
       {suffix}
-    </>
+    </span>
   );
 }
 
