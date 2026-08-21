@@ -27,6 +27,20 @@ body {
   font-family: var(--font-poppins), sans-serif;
 }
 
+/* Hide default cursor on desktop (hover-capable devices) only */
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  [role="button"] {
+    cursor: none;
+  }
+}
+
 ::selection {
   background: rgba(34, 211, 238, 0.25);
   color: white;

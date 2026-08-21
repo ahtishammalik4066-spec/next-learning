@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import projects from "@/data/projects";
 
 /* Pure CSS keyframes for the seamless marquee (self-contained) */
@@ -9,10 +12,52 @@ const marqueeStyles = `
 `;
 
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
+  const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0, glowX: 50, glowY: 50, active: false });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;  // 0 → 1
+    const y = (e.clientY - rect.top) / rect.height;  // 0 → 1
+
+    // Subtle tilt: max ~10deg. Mouse top-left → card tilts up-left, etc.
+    const rotateY = (x - 0.5) * 20;  // -10 → 10
+    const rotateX = (0.5 - y) * 20;  // -10 → 10
+
+    setTilt({
+      rotateX,
+      rotateY,
+      glowX: x * 100,
+      glowY: y * 100,
+      active: true,
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setTilt({ rotateX: 0, rotateY: 0, glowX: 50, glowY: 50, active: false });
+  };
+
   return (
-    <article className="group flex w-[260px] shrink-0 flex-col items-center rounded-3xl border border-white/[0.08] bg-[#0a0a0a] px-5 py-8 text-center transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/30 hover:shadow-[0_20px_60px_rgba(0,0,0,0.55)] sm:w-[300px] sm:px-7">
+    <article
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="group relative flex w-[260px] shrink-0 flex-col items-center rounded-3xl border border-white/[0.08] bg-[#0a0a0a] px-5 py-8 text-center transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/30 hover:shadow-[0_20px_60px_rgba(0,0,0,0.55)] sm:w-[300px] sm:px-7"
+      style={{
+        transform: `perspective(1000px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
+        transition: tilt.active ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
+        transformStyle: "preserve-3d",
+        willChange: "transform",
+      }}
+    >
+      {/* Mouse-following glow */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        style={{
+          background: `radial-gradient(280px circle at ${tilt.glowX}% ${tilt.glowY}%, rgba(34,211,238,0.12), transparent 60%)`,
+        }}
+      />
+
       {/* CIRCULAR IMAGE */}
-      <div className="relative">
+      <div className="relative" style={{ transform: "translateZ(30px)" }}>
         {/* Glow ring behind the circle */}
         <div className="absolute -inset-2 rounded-full bg-cyan-400/10 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
 
