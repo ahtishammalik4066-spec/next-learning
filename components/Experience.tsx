@@ -4,7 +4,6 @@ function Experience() {
       id="experience"
       className="border-y border-white/[0.06] bg-[#080808]"
     >
-
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
 
         <div className="mx-auto max-w-3xl text-center">
@@ -18,9 +17,9 @@ function Experience() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-xs leading-7 text-zinc-600 sm:text-sm">
-            Experience doesn't only come from job titles. It also
-            comes from building, solving problems and consistently
-            improving.
+            My experience has grown through building real-world applications,
+            solving development problems and continuously improving my skills
+            across frontend and backend technologies.
           </p>
 
         </div>
@@ -47,11 +46,16 @@ function Experience() {
                 <div className="max-w-xl rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl sm:p-5">
 
                   <p className="font-mono text-[8px] uppercase tracking-[0.25em] text-cyan-400 sm:text-[9px]">
-                    Developer Journey
+                    Software Developer
                   </p>
 
                   <p className="mt-2 text-base font-medium sm:text-xl">
-                    Learning. Building. Improving.
+                    Building. Learning. Delivering.
+                  </p>
+
+                  <p className="mt-2 text-xs leading-5 text-zinc-400 sm:text-sm">
+                    Focused on building modern, responsive and scalable web
+                    applications.
                   </p>
 
                 </div>
@@ -60,6 +64,48 @@ function Experience() {
 
             </div>
 
+          </div>
+
+        </div>
+
+        {/* EXPERIENCE HIGHLIGHTS */}
+
+        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-3 sm:mt-14 sm:grid-cols-4 sm:gap-4">
+
+          <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4 text-center">
+            <p className="text-xl font-semibold text-white sm:text-2xl">
+              01+
+            </p>
+            <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-zinc-600">
+              Year Experience
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4 text-center">
+            <p className="text-xl font-semibold text-white sm:text-2xl">
+              10+
+            </p>
+            <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-zinc-600">
+              Projects Built
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4 text-center">
+            <p className="text-xl font-semibold text-white sm:text-2xl">
+              08+
+            </p>
+            <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-zinc-600">
+              Technologies
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4 text-center">
+            <p className="text-xl font-semibold text-white sm:text-2xl">
+              Full
+            </p>
+            <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-zinc-600">
+              Stack Focus
+            </p>
           </div>
 
         </div>
@@ -86,19 +132,47 @@ function Experience() {
 
                 <div className="group min-w-0 flex-1 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 transition duration-500 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-cyan-400/[0.025] sm:p-6">
 
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
-                    Foundation
-                  </p>
+                  <div className="flex items-start justify-between gap-4">
 
-                  <h3 className="mt-3 text-lg font-semibold sm:text-xl">
-                    Programming Fundamentals
-                  </h3>
+                    <div>
+
+                      <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
+                        Foundation
+                      </p>
+
+                      <h3 className="mt-3 text-lg font-semibold sm:text-xl">
+                        Programming Fundamentals
+                      </h3>
+
+                    </div>
+
+                    <span className="font-mono text-[9px] text-zinc-700 sm:text-[10px]">
+                      01
+                    </span>
+
+                  </div>
 
                   <p className="mt-3 text-xs leading-6 text-zinc-500 sm:mt-4 sm:text-sm sm:leading-7">
-                    Started learning programming concepts, problem
-                    solving, logic building and the fundamentals required
-                    to become a software developer.
+                    Developed a strong foundation in programming, logical
+                    thinking, problem solving, algorithms and core software
+                    development concepts.
                   </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      Programming
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      Problem Solving
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      Algorithms
+                    </span>
+
+                  </div>
 
                 </div>
 
@@ -116,19 +190,51 @@ function Experience() {
 
                 <div className="group min-w-0 flex-1 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 transition duration-500 hover:-translate-y-1 hover:border-cyan-400/20 sm:p-6">
 
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
-                    Web Development
-                  </p>
+                  <div className="flex items-start justify-between gap-4">
 
-                  <h3 className="mt-3 text-lg font-semibold sm:text-xl">
-                    HTML • CSS • JavaScript
-                  </h3>
+                    <div>
+
+                      <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
+                        Web Development
+                      </p>
+
+                      <h3 className="mt-3 text-lg font-semibold sm:text-xl">
+                        HTML • CSS • JavaScript
+                      </h3>
+
+                    </div>
+
+                    <span className="font-mono text-[9px] text-zinc-700 sm:text-[10px]">
+                      02
+                    </span>
+
+                  </div>
 
                   <p className="mt-3 text-xs leading-6 text-zinc-500 sm:mt-4 sm:text-sm sm:leading-7">
-                    Learned how modern websites are structured and
-                    developed responsive interfaces while improving
-                    JavaScript and frontend development skills.
+                    Built responsive and interactive websites using modern
+                    frontend practices with a focus on clean UI, responsive
+                    layouts, usability and browser-based functionality.
                   </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      HTML5
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      CSS3
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      JavaScript
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      Responsive Design
+                    </span>
+
+                  </div>
 
                 </div>
 
@@ -146,19 +252,51 @@ function Experience() {
 
                 <div className="group min-w-0 flex-1 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 transition duration-500 hover:-translate-y-1 hover:border-cyan-400/20 sm:p-6">
 
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
-                    Backend
-                  </p>
+                  <div className="flex items-start justify-between gap-4">
 
-                  <h3 className="mt-3 text-lg font-semibold sm:text-xl">
-                    PHP • MySQL • APIs
-                  </h3>
+                    <div>
+
+                      <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
+                        Backend Development
+                      </p>
+
+                      <h3 className="mt-3 text-lg font-semibold sm:text-xl">
+                        PHP • MySQL • APIs
+                      </h3>
+
+                    </div>
+
+                    <span className="font-mono text-[9px] text-zinc-700 sm:text-[10px]">
+                      03
+                    </span>
+
+                  </div>
 
                   <p className="mt-3 text-xs leading-6 text-zinc-500 sm:mt-4 sm:text-sm sm:leading-7">
-                    Started building complete applications with
-                    authentication, dashboards, databases, CRUD systems,
-                    APIs and server-side functionality.
+                    Developed complete web applications with authentication,
+                    dashboards, CRUD operations, database integration,
+                    API communication and server-side business logic.
                   </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      PHP
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      MySQL
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      PDO
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      REST APIs
+                    </span>
+
+                  </div>
 
                 </div>
 
@@ -176,19 +314,52 @@ function Experience() {
 
                 <div className="group min-w-0 flex-1 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 transition duration-500 hover:-translate-y-1 hover:border-cyan-400/20 sm:p-6">
 
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
-                    Modern Stack
-                  </p>
+                  <div className="flex items-start justify-between gap-4">
 
-                  <h3 className="mt-3 text-lg font-semibold sm:text-xl">
-                    React • Next.js • Tailwind
-                  </h3>
+                    <div>
+
+                      <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400 sm:text-[10px]">
+                        Modern Stack
+                      </p>
+
+                      <h3 className="mt-3 text-lg font-semibold sm:text-xl">
+                        React • Next.js • TypeScript
+                      </h3>
+
+                    </div>
+
+                    <span className="font-mono text-[9px] text-zinc-700 sm:text-[10px]">
+                      04
+                    </span>
+
+                  </div>
 
                   <p className="mt-3 text-xs leading-6 text-zinc-500 sm:mt-4 sm:text-sm sm:leading-7">
-                    Moving toward modern full-stack development with
-                    React, Next.js, TypeScript, Tailwind CSS, APIs and
+                    Expanded into modern frontend and full-stack development
+                    using React, Next.js, TypeScript and Tailwind CSS,
+                    while working with reusable components, APIs and
                     modern application architecture.
                   </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      React
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      Next.js
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      TypeScript
+                    </span>
+
+                    <span className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1 font-mono text-[8px] text-zinc-500">
+                      Tailwind CSS
+                    </span>
+
+                  </div>
 
                 </div>
 
@@ -206,19 +377,56 @@ function Experience() {
 
                 <div className="group min-w-0 flex-1 rounded-2xl border border-emerald-400/10 bg-emerald-400/[0.025] p-5 transition duration-500 hover:-translate-y-1 hover:border-emerald-400/20 sm:p-6">
 
-                  <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-emerald-400 sm:text-[10px]">
-                    Currently
-                  </p>
+                  <div className="flex items-start justify-between gap-4">
 
-                  <h3 className="mt-3 text-lg font-semibold sm:text-xl">
-                    Building Real Projects
-                  </h3>
+                    <div>
+
+                      <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-emerald-400 sm:text-[10px]">
+                        Currently
+                      </p>
+
+                      <h3 className="mt-3 text-lg font-semibold sm:text-xl">
+                        Building Real Projects
+                      </h3>
+
+                    </div>
+
+                    <span className="font-mono text-[9px] text-emerald-400/50 sm:text-[10px]">
+                      NOW
+                    </span>
+
+                  </div>
 
                   <p className="mt-3 text-xs leading-6 text-zinc-500 sm:mt-4 sm:text-sm sm:leading-7">
                     Currently focused on building portfolio-quality
-                    applications, improving technical depth and preparing
-                    for professional opportunities.
+                    applications, improving technical depth, writing
+                    maintainable code and preparing for professional
+                    software development opportunities.
                   </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+
+                    <span className="rounded-full border border-emerald-400/10 bg-emerald-400/[0.04] px-3 py-1 font-mono text-[8px] text-emerald-400/70">
+                      Next.js
+                    </span>
+
+                    <span className="rounded-full border border-emerald-400/10 bg-emerald-400/[0.04] px-3 py-1 font-mono text-[8px] text-emerald-400/70">
+                      TypeScript
+                    </span>
+
+                    <span className="rounded-full border border-emerald-400/10 bg-emerald-400/[0.04] px-3 py-1 font-mono text-[8px] text-emerald-400/70">
+                      PHP
+                    </span>
+
+                    <span className="rounded-full border border-emerald-400/10 bg-emerald-400/[0.04] px-3 py-1 font-mono text-[8px] text-emerald-400/70">
+                      MySQL
+                    </span>
+
+                    <span className="rounded-full border border-emerald-400/10 bg-emerald-400/[0.04] px-3 py-1 font-mono text-[8px] text-emerald-400/70">
+                      Git
+                    </span>
+
+                  </div>
 
                 </div>
 
